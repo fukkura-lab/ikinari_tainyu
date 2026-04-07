@@ -71,7 +71,7 @@ export default function Page() {
               <div className="bg-surface-container-lowest/80 backdrop-blur-sm p-5 rounded-lg shadow-sm border border-white/50">
                 <div className="flex items-center justify-center gap-1 mb-1">
                   <p className="text-xs text-on-surface-variant">
-                    今日受け取った人
+                    本日の利用者
                   </p>
                   <Icon
                     name="groups"
