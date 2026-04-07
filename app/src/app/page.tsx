@@ -21,49 +21,52 @@ export default function Page() {
           backgroundImage: `linear-gradient(rgba(254,245,238,0.85), rgba(254,245,238,0.85)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuA0d9mq3nuMbawxBSthuTgpyyHmM2Jg2G7KDWZFrSDPwC15PyeVaMswpnIZdnfm5W-8cfhTjvdngE8cOhPSlQXYCbYCbiQvM4MAZPFLfknbouFtJak68sE_Ip-szKhQ4SwX02yNZl33EVUEKzBfk9fVvvbnbCYcD3bex8QtfEpBhOpAMA42tKtR2YgGczLlAWKqhdbreQzJtc4mEsBqrCPgOo97uVJQFg8jngnlzXanM6Y0iDg2fELugHh04jCV1qLc-wO-6FIBRy8)`,
         }}
       >
-        <header className="pt-8 px-6">
-          <div className="max-w-md mx-auto flex items-center justify-start">
+        <header className="pt-8 px-6 lg:max-w-6xl lg:mx-auto">
+          <div className="max-w-md mx-auto flex items-center justify-start lg:max-w-none">
             <span className="text-2xl font-bold text-[#322e2a] font-headline">
               いきなり体入<span className="text-primary">くん</span>
             </span>
           </div>
         </header>
 
-        <header className="pt-12 pb-12 px-6 relative">
-          <div className="max-w-md mx-auto text-center">
-            <div className="inline-flex items-center gap-1.5 px-4 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold mb-4">
-              北新地エリア限定{" "}
-              <Icon name="location_on" className="text-[14px]" />
+        <header className="pt-12 pb-12 px-6 relative lg:pt-24 lg:pb-24 lg:max-w-6xl lg:mx-auto">
+          <div className="max-w-md mx-auto text-center lg:max-w-none lg:grid lg:grid-cols-2 lg:gap-12 lg:text-left lg:items-center">
+            {/* Left Column: Text & CTA */}
+            <div>
+              <div className="inline-flex items-center gap-1.5 px-4 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold mb-4">
+                北新地エリア限定{" "}
+                <Icon name="location_on" className="text-[14px]" />
+              </div>
+
+              <h1 className="text-[2.25rem] font-bold leading-tight mb-4 tracking-tight">
+                わたしにも
+                <br className="lg:hidden" />
+                スカウト来るかな？
+              </h1>
+
+              <p className="text-on-surface-variant text-base leading-relaxed mb-8">
+                自撮り1枚で、今夜の北新地から
+                <br className="lg:hidden" />
+                スカウトが届く{" "}
+                <Icon
+                  name="photo_camera"
+                  className="text-[18px] align-middle"
+                />
+              </p>
+
+              <div className="relative group max-w-xs mx-auto mb-12 lg:mx-0">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary-container rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <Link
+                  href="/dashboard"
+                  className="relative w-full py-5 bg-gradient-to-r from-primary to-primary-dim text-white rounded-full text-lg font-bold shadow-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-transform"
+                >
+                  スカウトを受け取る{" "}
+                  <Icon name="arrow_forward" className="text-xl" />
+                </Link>
+              </div>
             </div>
 
-            <h1 className="text-[2.25rem] font-bold leading-tight mb-4 tracking-tight">
-              わたしにも
-              <br />
-              スカウト来るかな？
-            </h1>
-
-            <p className="text-on-surface-variant text-base leading-relaxed mb-8">
-              自撮り1枚で、今夜の北新地から
-              <br />
-              スカウトが届く{" "}
-              <Icon
-                name="photo_camera"
-                className="text-[18px] align-middle"
-              />
-            </p>
-
-            <div className="relative group max-w-xs mx-auto mb-12">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary-container rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-              <Link
-                href="/dashboard"
-                className="relative w-full py-5 bg-gradient-to-r from-primary to-primary-dim text-white rounded-full text-lg font-bold shadow-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-transform"
-              >
-                スカウトを受け取る{" "}
-                <Icon name="arrow_forward" className="text-xl" />
-              </Link>
-            </div>
-
-            {/* Bento Grid */}
+            {/* Right Column: Bento Grid */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-surface-container-lowest/80 backdrop-blur-sm p-5 rounded-lg shadow-sm border border-white/50">
                 <div className="flex items-center justify-center gap-1 mb-1">
@@ -142,12 +145,12 @@ export default function Page() {
       </div>
 
       {/* 3-Step Guide */}
-      <section className="px-6 mb-12 mt-12">
+      <section className="px-6 mb-12 mt-12 md:max-w-6xl md:mx-auto">
         <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
           使いかたは3ステップ{" "}
           <Icon name="auto_awesome" className="text-primary" />
         </h2>
-        <div className="space-y-6">
+        <div className="space-y-6 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
           <div className="bg-surface-container-low p-5 rounded-full flex items-center gap-6 shadow-sm border border-white/40">
             <div className="w-16 h-16 shrink-0 rounded-full bg-white flex items-center justify-center shadow-inner">
               <Icon name="add_a_photo" className="text-primary text-3xl" />
@@ -199,7 +202,7 @@ export default function Page() {
       </section>
 
       {/* Activity Feed */}
-      <section className="mb-12 relative overflow-hidden px-6">
+      <section className="mb-12 relative overflow-hidden px-6 md:max-w-6xl md:mx-auto">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-sm font-bold text-on-surface-variant uppercase tracking-wider">
             Realtime Activity
@@ -209,7 +212,7 @@ export default function Page() {
             <span className="text-[10px] font-bold text-green-600">LIVE</span>
           </div>
         </div>
-        <div className="space-y-3">
+        <div className="space-y-3 md:grid md:grid-cols-3 md:space-y-0 md:gap-4">
           <div className="bg-surface-container-lowest p-3 rounded-xl shadow-sm border-l-4 border-primary/20">
             <p className="text-[11px] leading-tight">
               <span className="font-bold">北新地ラウンジ</span>
@@ -235,11 +238,11 @@ export default function Page() {
       </section>
 
       {/* Testimonials */}
-      <section className="px-6 mb-12">
+      <section className="px-6 mb-12 md:max-w-6xl md:mx-auto">
         <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
           利用者のこえ <Icon name="chat" className="text-primary" />
         </h2>
-        <div className="flex gap-4 overflow-x-auto no-scrollbar pb-4 snap-x">
+        <div className="flex gap-4 overflow-x-auto no-scrollbar pb-4 snap-x md:grid md:grid-cols-2 md:overflow-visible">
           <div className="min-w-[280px] snap-center bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-surface-container">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -277,13 +280,13 @@ export default function Page() {
       </section>
 
       {/* Trust/Safety */}
-      <section className="px-6 mb-12">
+      <section className="px-6 mb-12 md:max-w-6xl md:mx-auto">
         <div className="bg-surface-container p-8 rounded-3xl">
           <h2 className="text-lg font-bold mb-8 text-center flex items-center justify-center gap-2">
             安心・安全へのこだわり{" "}
             <Icon name="shield" className="text-primary" />
           </h2>
-          <div className="space-y-10">
+          <div className="space-y-10 md:grid md:grid-cols-2 md:space-y-0 md:gap-x-12 md:gap-y-10">
             <div className="flex gap-5 items-start">
               <div className="w-10 h-10 shrink-0 bg-primary/10 rounded-lg flex items-center justify-center">
                 <Icon
@@ -358,7 +361,7 @@ export default function Page() {
       </section>
 
       {/* Expansion */}
-      <section className="px-6 mb-12">
+      <section className="px-6 mb-12 md:max-w-3xl md:mx-auto">
         <div className="bg-surface-container-low p-5 rounded-2xl border-2 border-dashed border-outline-variant/30 flex items-center justify-between">
           <div className="flex-1">
             <p className="font-bold text-sm mb-1 flex items-center gap-1.5">
@@ -379,7 +382,7 @@ export default function Page() {
       </section>
 
       {/* Final CTA */}
-      <section className="px-6 mb-16 text-center">
+      <section className="px-6 mb-16 text-center md:max-w-xl md:mx-auto">
         <h2 className="text-xl font-bold mb-6 flex items-center justify-center gap-2">
           まずは1分でスタート{" "}
           <Icon name="auto_awesome" className="text-primary" />
@@ -412,11 +415,11 @@ export default function Page() {
       </footer>
 
       {/* Fixed Bottom CTA */}
-      <div className="fixed bottom-0 left-0 w-full p-4 bg-background/80 backdrop-blur-md z-50">
-        <div className="max-w-md mx-auto">
+      <div className="fixed bottom-0 left-0 w-full p-4 bg-background/80 backdrop-blur-md z-50 md:bottom-8 md:right-8 md:left-auto md:w-auto md:bg-transparent md:p-0">
+        <div className="max-w-md mx-auto md:max-w-none">
           <Link
             href="/dashboard"
-            className="w-full py-4 bg-gradient-to-r from-primary to-primary-dim text-white rounded-full text-lg font-bold shadow-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-transform"
+            className="w-full py-4 bg-gradient-to-r from-primary to-primary-dim text-white rounded-full text-lg font-bold shadow-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-transform md:w-auto md:px-8 md:py-4 hover:shadow-2xl hover:-translate-y-1"
           >
             スカウトを受け取る{" "}
             <Icon name="arrow_forward" className="text-xl" />
