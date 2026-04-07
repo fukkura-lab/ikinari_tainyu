@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Icon } from "@/components/icon";
+import { ActivityTicker } from "@/components/activity-ticker";
 
 export default function Page() {
   return (
@@ -212,29 +213,7 @@ export default function Page() {
             <span className="text-[10px] font-bold text-green-600">LIVE</span>
           </div>
         </div>
-        <div className="space-y-3 md:grid md:grid-cols-3 md:space-y-0 md:gap-4">
-          <div className="bg-surface-container-lowest p-3 rounded-xl shadow-sm border-l-4 border-primary/20">
-            <p className="text-[11px] leading-tight">
-              <span className="font-bold">北新地ラウンジ</span>
-              が日当35,000円でスカウト{" "}
-              <Icon name="send" className="text-[12px] align-middle" />
-            </p>
-          </div>
-          <div className="bg-surface-container-lowest p-3 rounded-xl shadow-sm border-l-4 border-primary/20">
-            <p className="text-[11px] leading-tight">
-              <span className="font-bold">北新地クラブ</span>
-              が新しいキャストとマッチ成立{" "}
-              <Icon name="handshake" className="text-[12px] align-middle" />
-            </p>
-          </div>
-          <div className="bg-surface-container-lowest p-3 rounded-xl shadow-sm border-l-4 border-primary/20">
-            <p className="text-[11px] leading-tight">
-              <span className="font-bold">20代・未経験者</span>
-              が3店舗からスカウト受信{" "}
-              <Icon name="notifications" className="text-[12px] align-middle" />
-            </p>
-          </div>
-        </div>
+        <ActivityTicker />
       </section>
 
       {/* Testimonials */}
