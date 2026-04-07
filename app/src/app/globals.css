@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+:root {
+  --color-surface: #fef5ee;
+  --color-surface-bright: #fef5ee;
+  --color-surface-dim: #ddd3ca;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f9efe8;
+  --color-surface-container: #f0e6df;
+  --color-surface-container-high: #ebe1d9;
+  --color-surface-container-highest: #e5dbd3;
+  --color-surface-variant: #e5dbd3;
+  --color-surface-tint: #aa2c32;
+
+  --color-primary: #aa2c32;
+  --color-primary-dim: #992027;
+  --color-primary-container: #ff7574;
+  --color-primary-fixed: #ff7574;
+  --color-primary-fixed-dim: #f56364;
+  --color-on-primary: #ffefee;
+  --color-on-primary-container: #4e0009;
+  --color-on-primary-fixed: #000000;
+  --color-on-primary-fixed-variant: #60000d;
+  --color-inverse-primary: #ff6b6b;
+
+  --color-secondary: #5c5b59;
+  --color-secondary-dim: #50504e;
+  --color-secondary-container: #e4e2df;
+  --color-secondary-fixed: #e4e2df;
+  --color-secondary-fixed-dim: #d6d4d1;
+  --color-on-secondary: #f4f2ef;
+  --color-on-secondary-container: #525250;
+  --color-on-secondary-fixed: #3f3f3e;
+  --color-on-secondary-fixed-variant: #5c5b59;
+
+  --color-tertiary: #7343a9;
+  --color-tertiary-dim: #66369c;
+  --color-tertiary-container: #ca9cff;
+  --color-tertiary-fixed: #ca9cff;
+  --color-tertiary-fixed-dim: #be8df8;
+  --color-on-tertiary: #faefff;
+  --color-on-tertiary-container: #450e7b;
+  --color-on-tertiary-fixed: #26004a;
+  --color-on-tertiary-fixed-variant: #4e1c84;
+
+  --color-error: #b02500;
+  --color-error-dim: #b92902;
+  --color-error-container: #f95630;
+  --color-on-error: #ffefec;
+  --color-on-error-container: #520c00;
+
+  --color-background: #fef5ee;
+  --color-on-background: #322e2a;
+  --color-on-surface: #322e2a;
+  --color-on-surface-variant: #605a56;
+  --color-outline: #7c7670;
+  --color-outline-variant: #b3aca6;
+  --color-inverse-surface: #110e0a;
+  --color-inverse-on-surface: #a39c96;
+}
+
+@theme inline {
+  --color-surface: var(--color-surface);
+  --color-surface-bright: var(--color-surface-bright);
+  --color-surface-dim: var(--color-surface-dim);
+  --color-surface-container-lowest: var(--color-surface-container-lowest);
+  --color-surface-container-low: var(--color-surface-container-low);
+  --color-surface-container: var(--color-surface-container);
+  --color-surface-container-high: var(--color-surface-container-high);
+  --color-surface-container-highest: var(--color-surface-container-highest);
+  --color-surface-variant: var(--color-surface-variant);
+  --color-surface-tint: var(--color-surface-tint);
+
+  --color-primary: var(--color-primary);
+  --color-primary-dim: var(--color-primary-dim);
+  --color-primary-container: var(--color-primary-container);
+  --color-primary-fixed: var(--color-primary-fixed);
+  --color-primary-fixed-dim: var(--color-primary-fixed-dim);
+  --color-on-primary: var(--color-on-primary);
+  --color-on-primary-container: var(--color-on-primary-container);
+  --color-on-primary-fixed: var(--color-on-primary-fixed);
+  --color-on-primary-fixed-variant: var(--color-on-primary-fixed-variant);
+  --color-inverse-primary: var(--color-inverse-primary);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-dim: var(--color-secondary-dim);
+  --color-secondary-container: var(--color-secondary-container);
+  --color-secondary-fixed: var(--color-secondary-fixed);
+  --color-secondary-fixed-dim: var(--color-secondary-fixed-dim);
+  --color-on-secondary: var(--color-on-secondary);
+  --color-on-secondary-container: var(--color-on-secondary-container);
+  --color-on-secondary-fixed: var(--color-on-secondary-fixed);
+  --color-on-secondary-fixed-variant: var(--color-on-secondary-fixed-variant);
+
+  --color-tertiary: var(--color-tertiary);
+  --color-tertiary-dim: var(--color-tertiary-dim);
+  --color-tertiary-container: var(--color-tertiary-container);
+  --color-tertiary-fixed: var(--color-tertiary-fixed);
+  --color-tertiary-fixed-dim: var(--color-tertiary-fixed-dim);
+  --color-on-tertiary: var(--color-on-tertiary);
+  --color-on-tertiary-container: var(--color-on-tertiary-container);
+  --color-on-tertiary-fixed: var(--color-on-tertiary-fixed);
+  --color-on-tertiary-fixed-variant: var(--color-on-tertiary-fixed-variant);
+
+  --color-error: var(--color-error);
+  --color-error-dim: var(--color-error-dim);
+  --color-error-container: var(--color-error-container);
+  --color-on-error: var(--color-on-error);
+  --color-on-error-container: var(--color-on-error-container);
+
+  --color-background: var(--color-background);
+  --color-on-background: var(--color-on-background);
+  --color-on-surface: var(--color-on-surface);
+  --color-on-surface-variant: var(--color-on-surface-variant);
+  --color-outline: var(--color-outline);
+  --color-outline-variant: var(--color-outline-variant);
+  --color-inverse-surface: var(--color-inverse-surface);
+  --color-inverse-on-surface: var(--color-inverse-on-surface);
+
+  --font-sans: var(--font-zen-maru), var(--font-jakarta), sans-serif;
+  --font-headline: var(--font-jakarta), var(--font-zen-maru), sans-serif;
+
+  --radius-DEFAULT: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.glass-header {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes nav-bounce {
+  0% { transform: scale(0.8) translateY(4px); }
+  50% { transform: scale(1.15) translateY(-2px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+@keyframes tap-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(3px) scale(0.95); }
+}
+
+@keyframes tap-ripple {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+}

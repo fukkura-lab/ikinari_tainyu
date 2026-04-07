@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Zen+Maru+Gothic:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fef5ee",
+                    "secondary": "#5c5b59",
+                    "on-error-container": "#520c00",
+                    "surface-bright": "#fef5ee",
+                    "secondary-dim": "#50504e",
+                    "on-secondary-fixed-variant": "#5c5b59",
+                    "primary-dim": "#992027",
+                    "surface-container-low": "#f9efe8",
+                    "outline": "#7c7670",
+                    "on-surface-variant": "#605a56",
+                    "on-primary": "#ffefee",
+                    "on-error": "#ffefec",
+                    "tertiary-fixed": "#ca9cff",
+                    "error": "#b02500",
+                    "primary": "#aa2c32",
+                    "on-tertiary-fixed": "#26004a",
+                    "inverse-primary": "#ff6b6b",
+                    "surface-dim": "#ddd3ca",
+                    "secondary-container": "#e4e2df",
+                    "surface-container-high": "#ebe1d9",
+                    "on-tertiary-container": "#450e7b",
+                    "on-primary-fixed": "#000000",
+                    "on-secondary": "#f4f2ef",
+                    "tertiary-fixed-dim": "#be8df8",
+                    "surface-variant": "#e5dbd3",
+                    "surface-tint": "#aa2c32",
+                    "on-secondary-fixed": "#3f3f3e",
+                    "tertiary-container": "#ca9cff",
+                    "primary-fixed-dim": "#f56364",
+                    "on-tertiary-fixed-variant": "#4e1c84",
+                    "tertiary": "#7343a9",
+                    "tertiary-dim": "#66369c",
+                    "on-primary-fixed-variant": "#60000d",
+                    "error-dim": "#b92902",
+                    "on-surface": "#322e2a",
+                    "on-secondary-container": "#525250",
+                    "surface-container-highest": "#e5dbd3",
+                    "secondary-fixed-dim": "#d6d4d1",
+                    "secondary-fixed": "#e4e2df",
+                    "error-container": "#f95630",
+                    "primary-container": "#ff7574",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fef5ee",
+                    "inverse-surface": "#110e0a",
+                    "primary-fixed": "#ff7574",
+                    "on-primary-container": "#4e0009",
+                    "outline-variant": "#b3aca6",
+                    "on-background": "#322e2a",
+                    "inverse-on-surface": "#a39c96",
+                    "surface-container": "#f0e6df",
+                    "on-tertiary": "#faefff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans", "Zen Maru Gothic"],
+                    "body": ["Plus Jakarta Sans", "Zen Maru Gothic"],
+                    "label": ["Plus Jakarta Sans", "Zen Maru Gothic"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        font-family: 'Plus Jakarta Sans', 'Zen Maru Gothic', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-header {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 glass-header bg-[#fef5ee]/80 flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a stylish young Japanese woman with soft lighting and professional makeup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb-iRAPdeFeAYOdmbAB3YvYI8CfsIhog4v1DIzbeZuBNHFhHHivNYelb3anIK0s7MqYC8cf17-Mag6rlozMMTnYvO12i0OpPcRcA_GsGJc8gmdzDRvEpbWY-TdrCOcNcfmxnbVWO53tu6NCrEiF8Me6J-_-bF22uMU3cfStL454J7Pzv2hgiIJ4mf5ONUClpnzyEOVcyEbUX4eB605p9FEDRikE7VAb7Tajum7I-hkL31y7KJNyzsmzdJXf95eJet3ytRPLFFFFY0"/>
+</div>
+<h1 class="text-lg font-bold text-[#aa2c32]">Kitashinchi Companion</h1>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 bg-surface-container-lowest rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-xs font-bold text-on-surface-variant">受付中</span>
+</div>
+</header>
+<main class="pt-20 px-4 max-w-2xl mx-auto">
+<!-- Page Title & Status -->
+<div class="flex justify-between items-end mb-6 px-2">
+<div>
+<p class="text-on-surface-variant text-sm mb-1">Newest Offers</p>
+<h2 class="text-2xl font-bold">届いたスカウト <span class="text-primary text-3xl font-extrabold ml-1">12</span><span class="text-sm font-normal text-on-surface-variant ml-1">件</span></h2>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant p-2 hover:bg-surface-container transition-colors rounded-xl">
+<span class="material-symbols-outlined text-xl">tune</span>
+<span class="text-xs font-bold">並び替え</span>
+</button>
+</div>
+<!-- Filter Chips Section -->
+<section class="space-y-4 mb-8 overflow-hidden">
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
+<button class="whitespace-nowrap px-4 py-2 rounded-full border-2 border-primary bg-primary-container/10 text-primary font-bold text-sm">今日行ける</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full border-2 border-primary/20 text-on-surface-variant font-bold text-sm hover:border-primary transition-colors">未経験OK</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full border-2 border-primary/20 text-on-surface-variant font-bold text-sm hover:border-primary transition-colors">終電OK</button>
+</div>
+<div class="flex gap-2 overflow-x-auto no-scrollbar">
+<button class="flex items-center gap-1 whitespace-nowrap px-4 py-2 rounded-xl bg-surface-container text-on-secondary-fixed text-xs font-bold">
+                    ジャンル：すべて
+                    <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex items-center gap-1 whitespace-nowrap px-4 py-2 rounded-xl bg-surface-container text-on-secondary-fixed text-xs font-bold">
+                    時給帯：¥6,000〜
+                    <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="flex items-center gap-1 whitespace-nowrap px-4 py-2 rounded-xl bg-surface-container text-on-secondary-fixed text-xs font-bold">
+                    こだわり
+                    <span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</section>
+<!-- Scout Card List -->
+<div class="space-y-6">
+<!-- Card 1: Urgent/High Value -->
+<article class="relative bg-surface-container-lowest rounded-lg overflow-hidden border-2 border-error p-5 shadow-[0_12px_32px_rgba(176,37,0,0.08)]">
+<div class="absolute top-0 left-0 bg-primary text-white text-[10px] px-3 py-1 rounded-br-lg font-bold">NEW</div>
+<div class="absolute top-0 right-0 bg-error/10 text-error text-[10px] px-3 py-1 rounded-bl-lg font-bold">本日あと2枠</div>
+<div class="flex justify-between items-start mb-4 mt-2">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="text-3xl font-extrabold text-primary tracking-tight">¥8,000</span>
+<span class="text-xs font-bold bg-primary/10 text-primary px-2 py-0.5 rounded-md">本日OK</span>
+</div>
+<div class="flex gap-1.5">
+<span class="text-[10px] font-bold text-on-surface-variant px-2 py-1 bg-surface-container rounded-full">終電OK</span>
+<span class="text-[10px] font-bold text-on-surface-variant px-2 py-1 bg-surface-container rounded-full">送迎あり</span>
+</div>
+</div>
+<div class="text-right">
+<div class="flex items-center justify-end gap-1 text-error font-bold text-xs">
+<span class="material-symbols-outlined text-sm">bolt</span>
+                            残り2時間15分
+                        </div>
+<p class="text-[10px] text-on-surface-variant mt-1">2時間前に到着</p>
+</div>
+</div>
+<div class="flex gap-4 items-center pt-4 border-t border-surface-container">
+<div class="w-14 h-14 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Shop" class="w-full h-full object-cover" data-alt="Interior of a luxury modern lounge bar with warm amber lighting and velvet seating" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNFeepQGAwL-NX42nqnimMIFvcS3yEruxjVIvK8CVXmx4aCKpezqHdXEwALA7O2C1_ZlaiYi3srX59CaiKSE0b-TAlDcbog9ragagog1wo6kqfxTYkA3NmoqIFAGLLeYJUj3IYjbIfaeg3Yj2KtQXqIz8PH4DRctA9e5rq0ir9F_jupl6qC1pzwVXlnRbIi0P2c-LFl495huuf96CAo7nrLiEnnnAHLBkuuSb91w-E_DbnDvexW3SyCWw43xXgHjpLirCoxCEZQ7Y"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1 mb-0.5">
+<h3 class="text-sm font-bold truncate">CLUB Luminous</h3>
+<span class="text-[10px] text-on-surface-variant px-1.5 py-0.5 bg-surface-container-high rounded">クラブ</span>
+</div>
+<p class="text-xs text-secondary leading-relaxed line-clamp-2">
+                            今夜は団体様のご予約があるため、急遽追加メンバーを募集中です！未経験の方も大歓迎。まずは体入からOK✨
+                        </p>
+</div>
+</div>
+</article>
+<!-- Card 2: Unread/Pink Background -->
+<article class="relative bg-[#fff0f1] rounded-lg overflow-hidden p-5">
+<div class="absolute top-0 left-0 bg-primary text-white text-[10px] px-3 py-1 rounded-br-lg font-bold">NEW</div>
+<div class="flex justify-between items-start mb-4 mt-2">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="text-3xl font-extrabold text-primary tracking-tight">¥6,500</span>
+<span class="text-xs font-bold bg-surface-container-highest text-on-surface-variant px-2 py-0.5 rounded-md">明日OK</span>
+</div>
+<div class="flex gap-1.5">
+<span class="text-[10px] font-bold text-on-surface-variant px-2 py-1 bg-surface-container-lowest rounded-full">衣装貸出</span>
+<span class="text-[10px] font-bold text-on-surface-variant px-2 py-1 bg-surface-container-lowest rounded-full">私服OK</span>
+</div>
+</div>
+<div class="text-right">
+<div class="text-on-surface-variant font-bold text-xs">有効期限：明日まで</div>
+<p class="text-[10px] text-on-surface-variant mt-1">4時間前に到着</p>
+</div>
+</div>
+<div class="flex gap-4 items-center pt-4 border-t border-primary/10">
+<div class="w-14 h-14 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Shop" class="w-full h-full object-cover" data-alt="Minimalist elegant lounge reception with soft pink lighting and floral arrangements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6kus5oDiXnBo726B4tr9bS0uahb5j7mLv1fTeydBi-32_1v66SA7Vzm5ISga9F5BaoP6iVMBPeHdqoBzKbFP9N4cqp-EWSmUJhG-HjcJJAdEr2coe7-taGRF7A47Urs288WofA69pJoTI-2wj3_B2s8bGN6liyGSGSwMiG-cEFlewE2OmzUaztVxKvCGCNUOMmkhlwHay5grxZzae6e2dFudXvAPBvS0VqIYPuvZ2eOnlNxxMIt535wgTKW8NRBFVNU1A6lxkdDc"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1 mb-0.5">
+<h3 class="text-sm font-bold truncate">Lounge Fleur</h3>
+<span class="text-[10px] text-on-surface-variant px-1.5 py-0.5 bg-surface-container-lowest rounded">ラウンジ</span>
+</div>
+<p class="text-xs text-secondary leading-relaxed line-clamp-2">
+                            落ち着いた雰囲気のラウンジです🌹ノルマなしで、あなたのペースで働けます。お気軽にご連絡ください！
+                        </p>
+</div>
+</div>
+</article>
+<!-- Card 3: Standard -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden p-5 shadow-[0_4px_12px_rgba(0,0,0,0.02)]">
+<div class="flex justify-between items-start mb-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="text-3xl font-extrabold text-primary tracking-tight">¥7,000</span>
+</div>
+<div class="flex gap-1.5">
+<span class="text-[10px] font-bold text-on-surface-variant px-2 py-1 bg-surface-container rounded-full">高額バック</span>
+<span class="text-[10px] font-bold text-on-surface-variant px-2 py-1 bg-surface-container rounded-full">日払い可</span>
+</div>
+</div>
+<div class="text-right">
+<div class="text-on-surface-variant font-bold text-xs">有効期限：あと3日</div>
+<p class="text-[10px] text-on-surface-variant mt-1">昨日到着</p>
+</div>
+</div>
+<div class="flex gap-4 items-center pt-4 border-t border-surface-container">
+<div class="w-14 h-14 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Shop" class="w-full h-full object-cover" data-alt="Sophisticated bar counter with crystal glasses and premium liquor bottles, moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYkzw55AqQW7a6MaKfl6Y1fTiKrjDbEAq68tBSgtPk7znhwGJwZvb_YKwvAl0bWP7xxChtXZJZ62661j7AakXANy22iqz4M-_xWH6mzcUH_Uj2Z4LbfihlFOlWHr10cGdCT5MKwO-U_z2y_ovMW08inXwzyp09n0NcHIFFxTVxFJcPUtSNwpekkEEXTuuYjAZMeZaTBcLZBrnFlzASofthiCMB6p5zAESo4A9e3Snbp_TIyNJyd7aDv8dlqAG0NKfLEZIxZ83b57c"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1 mb-0.5">
+<h3 class="text-sm font-bold truncate">Bar &amp; Lounge EMERALD</h3>
+<span class="text-[10px] text-on-surface-variant px-1.5 py-0.5 bg-surface-container-high rounded">バーラウンジ</span>
+</div>
+<p class="text-xs text-secondary leading-relaxed line-clamp-2">
+                            プロフィールの雰囲気がお店にぴったりだと思いスカウトしました🍸まずは一度お話ししてみませんか？
+                        </p>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-8 glass-header bg-[#fef5ee]/80 rounded-t-[2.5rem] z-50 shadow-[0_-12px_32px_rgba(170,44,50,0.06)]">
+<a class="flex flex-col items-center justify-center text-stone-400 p-2 hover:text-[#aa2c32] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-['Plus_Jakarta_Sans','Zen_Maru_Gothic'] text-[10px] font-bold">ホーム</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#aa2c32] bg-white/50 rounded-2xl p-2 transition-all scale-110" href="#">
+<span class="material-symbols-outlined mb-1">mail</span>
+<span class="font-['Plus_Jakarta_Sans','Zen_Maru_Gothic'] text-[10px] font-bold">スカウト</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 p-2 hover:text-[#aa2c32] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">chat_bubble</span>
+<span class="font-['Plus_Jakarta_Sans','Zen_Maru_Gothic'] text-[10px] font-bold">メッセージ</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 p-2 hover:text-[#aa2c32] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-['Plus_Jakarta_Sans','Zen_Maru_Gothic'] text-[10px] font-bold">マイページ</span>
+</a>
+</nav>
+</body></html>

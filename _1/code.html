@@ -1,0 +1,229 @@
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Zen+Maru+Gothic:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface": "#fef5ee",
+                  "secondary": "#5c5b59",
+                  "on-error-container": "#520c00",
+                  "surface-bright": "#fef5ee",
+                  "secondary-dim": "#50504e",
+                  "on-secondary-fixed-variant": "#5c5b59",
+                  "primary-dim": "#992027",
+                  "surface-container-low": "#f9efe8",
+                  "outline": "#7c7670",
+                  "on-surface-variant": "#605a56",
+                  "on-primary": "#ffefee",
+                  "on-error": "#ffefec",
+                  "tertiary-fixed": "#ca9cff",
+                  "error": "#b02500",
+                  "primary": "#aa2c32",
+                  "on-tertiary-fixed": "#26004a",
+                  "inverse-primary": "#ff6b6b",
+                  "surface-dim": "#ddd3ca",
+                  "secondary-container": "#e4e2df",
+                  "surface-container-high": "#ebe1d9",
+                  "on-tertiary-container": "#450e7b",
+                  "on-primary-fixed": "#000000",
+                  "on-secondary": "#f4f2ef",
+                  "tertiary-fixed-dim": "#be8df8",
+                  "surface-variant": "#e5dbd3",
+                  "surface-tint": "#aa2c32",
+                  "on-secondary-fixed": "#3f3f3e",
+                  "tertiary-container": "#ca9cff",
+                  "primary-fixed-dim": "#f56364",
+                  "on-tertiary-fixed-variant": "#4e1c84",
+                  "tertiary": "#7343a9",
+                  "tertiary-dim": "#66369c",
+                  "on-primary-fixed-variant": "#60000d",
+                  "error-dim": "#b92902",
+                  "on-surface": "#322e2a",
+                  "on-secondary-container": "#525250",
+                  "surface-container-highest": "#e5dbd3",
+                  "secondary-fixed-dim": "#d6d4d1",
+                  "secondary-fixed": "#e4e2df",
+                  "error-container": "#f95630",
+                  "primary-container": "#ff7574",
+                  "surface-container-lowest": "#ffffff",
+                  "background": "#fef5ee",
+                  "inverse-surface": "#110e0a",
+                  "primary-fixed": "#ff7574",
+                  "on-primary-container": "#4e0009",
+                  "outline-variant": "#b3aca6",
+                  "on-background": "#322e2a",
+                  "inverse-on-surface": "#a39c96",
+                  "surface-container": "#f0e6df",
+                  "on-tertiary": "#faefff"
+          },
+          "borderRadius": {
+                  "DEFAULT": "1rem",
+                  "lg": "2rem",
+                  "xl": "3rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Plus Jakarta Sans", "Zen Maru Gothic"],
+                  "body": ["Plus Jakarta Sans", "Zen Maru Gothic"],
+                  "label": ["Plus Jakarta Sans", "Zen Maru Gothic"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', 'Zen Maru Gothic', sans-serif;
+    }
+    .active-state-glow {
+      box-shadow: 0 0 20px rgba(74, 222, 128, 0.2);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fef5ee]/80 dark:bg-stone-900/80 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container shadow-sm border-2 border-white">
+<img alt="User" class="w-full h-full object-cover" data-alt="portrait of a young smiling Japanese woman with natural makeup in soft daylight lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB98E94HgaEs2sTAcUS11qZq9fixmPgPsEEkxcEyJ1QikaYObGCxFBILatu8mMC7rL88Q-CIRbgRKTuYgU0IynEC3AZaiq_MQgjCnJ1EZGSE4KUk1308UiwAMwi_bdVUfi5AkaWg6IS-wGgb5nIj_7iaf-ogxPpA-cQ1VMPMYCQLVg2FZSe55iWZUq176WFGpOVWMpIsuprAUjSDVVP5hhclO0Z5x05QfjQq1d4P__Md3okXSqZ02vsls0bDPY0_UqcgJo2J6Eo9Bs"/>
+</div>
+<h1 class="text-lg font-bold text-[#aa2c32] dark:text-[#ff6b6b]">Kitashinchi Companion</h1>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-100 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-xs font-bold text-emerald-700">受付中</span>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="pt-24 px-6 max-w-md mx-auto">
+<!-- Active Status Card -->
+<section class="relative overflow-hidden bg-gradient-to-br from-emerald-50 to-white rounded-xl p-8 text-center active-state-glow mb-8">
+<div class="absolute top-0 left-0 w-full h-1 bg-emerald-400 opacity-20"></div>
+<div class="mb-4">
+<span class="text-on-surface-variant text-sm font-medium">現在、お店にあなたの意欲を公開中です 💌</span>
+</div>
+<div class="flex flex-col items-center gap-2 mb-6">
+<div class="text-4xl font-extrabold text-on-surface tracking-tight">15分経過</div>
+<div class="px-4 py-2 bg-primary-container/20 rounded-full">
+<span class="text-primary font-bold">届いたスカウト：3件</span>
+</div>
+</div>
+<a class="text-sm font-medium text-on-surface-variant/70 underline underline-offset-4 hover:text-primary transition-colors" href="#">
+        受付を止める
+      </a>
+</section>
+<!-- Real-time Notifications / Scouts -->
+<div class="space-y-4">
+<div class="flex items-center justify-between mb-2 px-1">
+<h2 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+          新着スカウト
+        </h2>
+<span class="text-xs text-on-surface-variant">リアルタイム更新中</span>
+</div>
+<!-- Scout Card 1 -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 shadow-sm border-l-4 border-primary transition-all active:scale-95">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Lounge Interior" class="w-full h-full object-cover" data-alt="high-end luxury lounge interior with warm amber lighting and velvet seating in Kitashinchi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_XqpARMk8tn731TkS6u02hC0PF5VDutUTv6tPlFZ5eip7wFXKcVR3dexwEfbF_igMq--1Vu55eLA3aNNxR02h-dK1Jjunu77b3y4l_nra89-BkKMmvi3FdJNPQ0l3jCS61zG0oZ0xHY7JKMnPNFBt-o7Bw5QExrYTTnUCRODuhGko0YB066cIM9y0ra3q0FTgKMimCp9o33JPy1FWZIHz1Mo3iTZVuXq9VBYsz1vg0p7H6lT5ZjelH810D7qFzDFHzBF5oemesTk"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-surface">Club Celeste (セレスト)</h3>
+<span class="text-[10px] bg-primary text-white px-2 py-0.5 rounded-full">NEW</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-2 line-clamp-1">「今から3時間、特別時給で募集しています！」</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-bold text-primary bg-primary-container/10 px-2 py-0.5 rounded">時給 ¥7,000〜</span>
+<span class="text-[10px] font-bold text-secondary bg-secondary-container px-2 py-0.5 rounded">送迎あり</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Scout Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg p-4 shadow-sm border-l-4 border-primary/40 transition-all active:scale-95">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Bar Interior" class="w-full h-full object-cover" data-alt="sophisticated whiskey bar back counter with many bottles and elegant low lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvCSWpQT0JFY0EzYhgRtJiykYFlQycvC9XFLd6MwXTpZJI-lWe2Safn5wPEPQEqBKdO710Pn87o_oFnaPW9h5RBIN7-le30cu411uNBxKKGWPBa7TuFTLe1tVS9iUgseyAAC4PLe-QxN1nC8kq6TPO-Li4X5kv1Kn2EJubA7CKCMmsCBmE2S5hGWl6XjKb-1zxuKLf-_vr-J2qGllUWFBub4WI1jThDe-_LkX2uNWm69Dch87Ta0rYWcY5XyMBj1sCzFd-9e5NYoM"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-surface">Lounge 華月 (Kagetsu)</h3>
+<span class="text-[10px] text-on-surface-variant">2分前</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-2 line-clamp-1">プロフィールの雰囲気が素敵ですね。ぜひ一度...</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-bold text-primary bg-primary-container/10 px-2 py-0.5 rounded">時給 ¥6,500〜</span>
+<span class="text-[10px] font-bold text-secondary bg-secondary-container px-2 py-0.5 rounded">全額日払いOK</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Scout Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg p-4 shadow-sm border-l-4 border-primary/20 transition-all active:scale-95">
+<div class="flex gap-4">
+<div class="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Cocktail" class="w-full h-full object-cover" data-alt="a beautifully garnished craft cocktail in a crystal glass on a dark counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGUXdW4wt_8AXqhKUPVM1ufsylOCB3Xi7mrsBTwFYIvVA3mkeND23RTGRpEKak9AJpLh2cDCOkh0eomqGYtdn2cX3oahE5pHT64_z2d2T6nByls4hVIu7SfHb5K6Ao9KsCvUrrFhnCPdomq7bXUm4YC9QGp1M2EKhMUSRUZSw5UIfJaja5CR987y5ysMEZapATCXewCvMB41pHauqhhlTJZwwR1B2OyRBUUtFotEaUycIDU6TjHH68LmUmLJwVip6XpNp5ffVB9b8"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-surface">Wine &amp; Bar 凛</h3>
+<span class="text-[10px] text-on-surface-variant">5分前</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-2 line-clamp-1">体験入店からいかがでしょうか？本日空きあり</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-bold text-primary bg-primary-container/10 px-2 py-0.5 rounded">時給 ¥5,000〜</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Perspective Message Bubble -->
+<div class="mt-8 bg-tertiary-container/20 rounded-xl p-5 relative">
+<div class="absolute -top-3 left-6 bg-tertiary text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
+        アドバイス 💡
+      </div>
+<p class="text-sm text-on-tertiary-container font-medium leading-relaxed pt-1">
+        北新地エリアは21時以降にスカウトが活発になります！<br/>「時給交渉可」のフラグを立てると、より好条件なオファーが届きやすくなりますよ。
+      </p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-8 bg-[#fef5ee]/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-t-[2.5rem] z-50 shadow-[0_-12px_32px_rgba(170,44,50,0.06)]">
+<!-- Active: ホーム -->
+<a class="flex flex-col items-center justify-center text-[#aa2c32] dark:text-[#ff6b6b] bg-white/50 dark:bg-stone-800/50 rounded-2xl p-2 transition-all scale-110" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Plus_Jakarta_Sans','Zen_Maru_Gothic'] text-[10px] font-bold">ホーム</span>
+</a>
+<!-- Inactive: スカウト -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-[#aa2c32] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="mail">mail</span>
+<span class="font-['Plus_Jakarta_Sans','Zen_Maru_Gothic'] text-[10px] font-bold">スカウト</span>
+</a>
+<!-- Inactive: メッセージ -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-[#aa2c32] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-['Plus_Jakarta_Sans','Zen_Maru_Gothic'] text-[10px] font-bold">メッセージ</span>
+</a>
+<!-- Inactive: マイページ -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 p-2 hover:text-[#aa2c32] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans','Zen_Maru_Gothic'] text-[10px] font-bold">マイページ</span>
+</a>
+</nav>
+</body></html>

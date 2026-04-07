@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Zen+Maru+Gothic:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#4e1c84",
+                    "on-secondary": "#f4f2ef",
+                    "error": "#b02500",
+                    "secondary-fixed-dim": "#d6d4d1",
+                    "surface-tint": "#aa2c32",
+                    "on-tertiary": "#faefff",
+                    "secondary-container": "#e4e2df",
+                    "surface-container": "#f0e6df",
+                    "tertiary": "#7343a9",
+                    "secondary": "#5c5b59",
+                    "tertiary-dim": "#66369c",
+                    "surface-container-low": "#f9efe8",
+                    "primary-fixed-dim": "#f56364",
+                    "outline-variant": "#b3aca6",
+                    "primary-container": "#ff7574",
+                    "on-background": "#322e2a",
+                    "primary-dim": "#992027",
+                    "on-error": "#ffefec",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#26004a",
+                    "inverse-surface": "#110e0a",
+                    "on-tertiary-container": "#450e7b",
+                    "outline": "#7c7670",
+                    "on-secondary-fixed-variant": "#5c5b59",
+                    "tertiary-container": "#ca9cff",
+                    "surface-container-highest": "#e5dbd3",
+                    "surface": "#fef5ee",
+                    "on-surface-variant": "#605a56",
+                    "primary": "#aa2c32",
+                    "on-primary-fixed-variant": "#60000d",
+                    "secondary-dim": "#50504e",
+                    "on-primary": "#ffefee",
+                    "tertiary-fixed-dim": "#be8df8",
+                    "surface-dim": "#ddd3ca",
+                    "on-primary-container": "#4e0009",
+                    "background": "#fef5ee",
+                    "inverse-primary": "#ff6b6b",
+                    "error-dim": "#b92902",
+                    "surface-container-high": "#ebe1d9",
+                    "inverse-on-surface": "#a39c96",
+                    "secondary-fixed": "#e4e2df",
+                    "surface-variant": "#e5dbd3",
+                    "surface-bright": "#fef5ee",
+                    "on-secondary-fixed": "#3f3f3e",
+                    "on-secondary-container": "#525250",
+                    "on-primary-fixed": "#000000",
+                    "tertiary-fixed": "#ca9cff",
+                    "error-container": "#f95630",
+                    "on-error-container": "#520c00",
+                    "primary-fixed": "#ff7574",
+                    "on-surface": "#322e2a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans", "Zen Maru Gothic"],
+                    "body": ["Plus Jakarta Sans", "Zen Maru Gothic"],
+                    "label": ["Plus Jakarta Sans", "Zen Maru Gothic"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Zen Maru Gothic', 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased mb-32">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-[#fef5ee]/80 dark:bg-stone-950/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-4 h-16 w-full max-w-md mx-auto">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-stone-200/50 dark:hover:bg-stone-800/50 active:scale-95 duration-200 text-[#aa2c32] dark:text-[#ff6b6b]">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans','Zen_Maru_Gothic'] text-stone-800 dark:text-stone-100 font-semibold">Scout Details</h1>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-stone-200/50 dark:hover:bg-stone-800/50 active:scale-95 duration-200 text-[#605a56] dark:text-stone-400">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</header>
+<main class="max-w-md mx-auto min-h-screen">
+<!-- Photo Gallery (35-40% height) -->
+<section class="relative w-full h-[353px] overflow-hidden">
+<div class="flex h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar">
+<div class="flex-shrink-0 w-full h-full snap-start relative">
+<img class="w-full h-full object-cover" data-alt="luxury interior of a high-end lounge in kitashinchi with velvet seating and warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn1xoTicAVlpIIswBtqH6kvOZ0qBhu2B2jGQ2ktEw3T66V2vTnq1DWU1uVzNc8dHNgFC4oe4i6cVy1ljE2G1ct1PDs4H7pJx_rUql6O0P-aDhcRNDGk8P2zve_Vja7NX2JoYeF-BaG-WAua7L0eiuuivJyDR0hwnAYycWmPEFngvqlw6yANWlwQXJhj81WmyzV0tw9SKmo_BSi27nr7O1l-cBDNXTb5k4Nen965d5nr4pJepzEiQO0vIJNaa4rsWL6TZKs2pQFN6I"/>
+</div>
+<div class="flex-shrink-0 w-full h-full snap-start relative">
+<img class="w-full h-full object-cover" data-alt="upscale bar counter with crystal glasses and premium spirits beautifully illuminated at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX6UI4YlGVxCBTigPgArJbUJULCJaWgeSz6E9-wdtoF4WUpBXlMg31mb3vhobOSqW54hOBDoHsR1SioraFmg6thy_n2whaPb588gGBQgIRF8T7jTbpwEX3ok-qf7XTBw1SkNMgYQQlbh0-JflkVXwo9BPlNkYseo9yUE9aNeD9ZuLVGSL5BNYrUo9yYZQmPKFvMYW2z2HA2wFc7cdK49YARgJaWMnicOQ4a25SRtIYnwWe3XVSl9pYLrqCSzqSG-ns-EqI2PJKo9w"/>
+</div>
+</div>
+<!-- Indicators -->
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+<div class="w-2 h-2 rounded-full bg-white/40"></div>
+<div class="w-2 h-2 rounded-full bg-white/40"></div>
+</div>
+</section>
+<!-- Immediate Info -->
+<section class="px-5 pt-6 pb-4">
+<div class="flex flex-wrap gap-2 mb-3">
+<span class="bg-[#e6f4ea] text-[#1e7e34] px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    Today OK
+                </span>
+<span class="bg-primary-container/20 text-primary px-3 py-1 rounded-full text-xs font-bold">
+                    Only 2 spots left today
+                </span>
+</div>
+<div class="flex items-baseline gap-1 mb-2">
+<span class="text-primary text-4xl font-black">¥8,000</span>
+<span class="text-on-surface-variant font-medium">/時給</span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h2 class="text-2xl font-black text-on-surface tracking-tight mb-1">Ikinari Tainyu-kun</h2>
+<p class="text-on-surface-variant font-medium text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-base">nightlife</span>
+                        Club / Lounge
+                    </p>
+</div>
+</div>
+</section>
+<!-- Shop Message -->
+<section class="px-5 mb-8">
+<div class="bg-tertiary-container/20 p-5 rounded-lg border-l-4 border-tertiary/40">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional and friendly shop manager smiling warmly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_KGoJW6EKAdD0GWozfr840T_1Nvy-iJs4k8sSmYa_V1pPYNbddlTusXiGva_AK6woSgSoxYfgsWjTPeDJpqd0aEABbT7WF-OuwbbcEAqb_tfZtIXkzro9C_h0cWA9ux7EQKw7lUpND_G_KusGvYqhQoB9OoKJxHRHF2x6J97Ldmnea_67tBFsa5cvcwqkCWa5i-uPz88086xgcgGwkLjn9Avv8IfcCKrm5y5yLa33F-4OuyNwNSE6n7W8Yt0LaY5_oZlai7HDyE8"/>
+</div>
+<span class="font-bold text-sm text-tertiary">採用担当者からのメッセージ</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed font-medium">
+                    当店は、北新地の中でも落ち着いた客層が自慢です。未経験の方でも専属スタッフがしっかりサポートするので、安心してスタートできます。まずは体験入店から始めてみませんか？
+                </p>
+</div>
+</section>
+<!-- Conditions Section -->
+<section class="px-5 space-y-6 mb-8">
+<!-- Ease of Work -->
+<div class="bg-surface-container-low p-6 rounded-lg">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="work">work</span>
+<h3 class="font-bold text-lg">Ease of Work</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-sm font-bold">全額日払いOK</span>
+<span class="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-sm font-bold">週1日〜勤務可</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-3 py-1.5 rounded-full text-sm font-medium">終電上がり応相談</span>
+</div>
+<button class="mt-4 text-primary text-sm font-bold flex items-center gap-1">
+                    Show more <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Environment -->
+<div class="bg-surface-container-low p-6 rounded-lg">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+<h3 class="font-bold text-lg">Environment</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-sm font-bold">未経験者歓迎</span>
+<span class="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-sm font-bold">20代中心の職場</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-3 py-1.5 rounded-full text-sm font-medium">派閥なし</span>
+</div>
+<button class="mt-4 text-primary text-sm font-bold flex items-center gap-1">
+                    Show more <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Comfort -->
+<div class="bg-surface-container-low p-6 rounded-lg">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="chair">chair</span>
+<h3 class="font-bold text-lg">Comfort</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-sm font-bold">送りあり</span>
+<span class="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-sm font-bold">衣装レンタル無料</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-3 py-1.5 rounded-full text-sm font-medium">個人ロッカー完備</span>
+</div>
+<button class="mt-4 text-primary text-sm font-bold flex items-center gap-1">
+                    Show more <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+</section>
+<!-- Trial Day Info -->
+<section class="px-5 mb-8">
+<h3 class="font-black text-xl mb-4">Trial Day Info</h3>
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-bold">持ち物チェックリスト</p>
+<p class="text-xs text-on-surface-variant">身分証、パンプス（あれば）、メイク道具</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-bold">服装について</p>
+<p class="text-xs text-on-surface-variant">清潔感のあるワンピースやスカートスタイル</p>
+</div>
+</div>
+<div class="pt-4 mt-2 border-t border-surface-container">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">location_on</span>
+<span class="text-sm font-medium">Location: Kitashinchi Area</span>
+</div>
+<span class="text-[10px] bg-secondary-container text-secondary px-2 py-0.5 rounded italic">Address hidden until match</span>
+</div>
+<div class="mt-3 w-full h-32 rounded-lg bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover opacity-60 grayscale" data-alt="abstract stylized map showing an urban street grid with soft aesthetic tones" data-location="Osaka Kitashinchi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMsIThTdEMLYPtKT9y8EavCdfNf1U6wC6_b6EfOA0mgB85aTFzmzmUdLEt7DG6qeEW9t_1rf89CRjuLY_n2I-U1SapYQBfhv1jjqJ0qbhWvYiP9YF6hKCtSD1wiJj-rDGYApRJ6I1CTOtsSisp0y24BukAKxYS-w7rM2FNVejCoEVJTvzLOpFId5GlG9ZLBUrsqtNwI7zWKiKnH8A4tlRRXwkTET9-A3FewmUwqF-PwNzdxDCh1KDWGF6XsFFWFfd2REs7z1opPzQ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="px-5 mb-12">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-black text-xl">Reviews</h3>
+<span class="text-primary font-bold text-sm">4.8 (124 reviews)</span>
+</div>
+<div class="space-y-4">
+<!-- Review Card -->
+<div class="bg-surface-container-lowest p-5 rounded-lg">
+<div class="flex justify-between mb-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] text-on-surface-variant">Anonymous</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        スタッフさんが本当に優しくて、初めてのナイトワークでしたがリラックスして働けました。客層も良く、チップをいただける機会も多かったです。
+                    </p>
+</div>
+<!-- Review Card -->
+<div class="bg-surface-container-lowest p-5 rounded-lg">
+<div class="flex justify-between mb-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="text-[10px] text-on-surface-variant">Anonymous</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        送迎がしっかりしていて安心です。お店の雰囲気も豪華で、テンションが上がります！
+                    </p>
+</div>
+</div>
+<button class="w-full py-4 mt-4 text-on-surface-variant font-bold text-sm border-2 border-surface-container rounded-lg">
+                See more
+            </button>
+</section>
+</main>
+<!-- Floating Action Bar (Fixed Bottom) -->
+<nav class="fixed bottom-0 left-0 w-full bg-[#fef5ee]/90 dark:bg-stone-900/90 backdrop-blur-xl rounded-t-[2rem] z-50 shadow-[0_-12px_32px_rgba(170,44,50,0.08)]">
+<div class="max-w-md mx-auto flex justify-between items-center px-6 pb-8 pt-6">
+<button class="text-[#605a56] dark:text-stone-300 font-bold text-sm hover:opacity-90 transition-opacity active:scale-[0.98] duration-200">
+                Decline
+            </button>
+<button class="flex items-center justify-center gap-3 bg-gradient-to-r from-[#aa2c32] to-[#ff6b6b] text-white rounded-full py-4 px-8 shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity active:scale-[0.98] duration-200">
+<span class="material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-bold tracking-wide">¥8,000 Decide on this shop</span>
+</button>
+</div>
+</nav>
+</body></html>
