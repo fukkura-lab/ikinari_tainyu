@@ -55,7 +55,7 @@ export function ActivityTicker() {
   const getItem = (index: number) => activities[(page + index) % activities.length];
 
   return (
-    <div className="space-y-3 overflow-hidden">
+    <div className="space-y-3">
       {[0, 1, 2].map((i) => {
         const item = getItem(i);
         return (
