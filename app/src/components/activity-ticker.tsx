@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Icon } from "@/components/icon";
 
 const activities = [
@@ -21,17 +21,24 @@ const activities = [
   },
 ];
 
+type Phase = "entering" | "visible" | "exiting";
+
 export function ActivityTicker() {
   const [page, setPage] = useState(0);
+  const [phase, setPhase] = useState<Phase>("entering");
   const [itemStates, setItemStates] = useState([false, false, false]);
+  const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
   const showItems = useCallback(() => {
+    setPhase("entering");
     setItemStates([false, false, false]);
 
-    // 各アイテムを順番にスライドイン
     setTimeout(() => setItemStates((s) => [true, s[1], s[2]]), 100);
     setTimeout(() => setItemStates((s) => [s[0], true, s[2]]), 300);
-    setTimeout(() => setItemStates((s) => [s[0], s[1], true]), 500);
+    setTimeout(() => {
+      setItemStates((s) => [s[0], s[1], true]);
+      setPhase("visible");
+    }, 500);
   }, []);
 
   useEffect(() => {
@@ -40,19 +47,34 @@ export function ActivityTicker() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // 全アイテムを上にスライドアウト
+      // 上にフェードアウト開始
+      setPhase("exiting");
       setItemStates([false, false, false]);
-      // 次のページへ切り替え
-      setTimeout(() => {
+
+      timerRef.current = setTimeout(() => {
         setPage((p) => (p + 1) % activities.length);
-      }, 400);
+      }, 500);
     }, 4000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
   }, []);
 
-  // 3件を現在のページオフセットからローテーション
   const getItem = (index: number) => activities[(page + index) % activities.length];
+
+  const getStyle = (visible: boolean): React.CSSProperties => {
+    if (visible) {
+      return { opacity: 1, transform: "translateX(0) translateY(0)" };
+    }
+    if (phase === "exiting") {
+      // 上にスライド+フェードアウト
+      return { opacity: 0, transform: "translateX(0) translateY(-20px)" };
+    }
+    // 右からスライドイン待ち
+    return { opacity: 0, transform: "translateX(40px) translateY(12px)" };
+  };
 
   return (
     <div className="space-y-3">
@@ -62,12 +84,7 @@ export function ActivityTicker() {
           <div
             key={`${page}-${i}`}
             className="transition-all duration-500 ease-out"
-            style={{
-              opacity: itemStates[i] ? 1 : 0,
-              transform: itemStates[i]
-                ? "translateX(0) translateY(0)"
-                : "translateX(40px) translateY(12px)",
-            }}
+            style={getStyle(itemStates[i])}
           >
             <div className="bg-surface-container-lowest p-3 rounded-xl shadow-sm border-l-4 border-primary/20">
               <p className="text-[11px] leading-tight">
