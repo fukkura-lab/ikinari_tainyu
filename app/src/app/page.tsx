@@ -39,13 +39,13 @@ export default function Page() {
             <h1 className="text-[2.25rem] font-bold leading-tight mb-4 tracking-tight">
               わたしにも
               <br />
-              オファー来るかな？
+              スカウト来るかな？
             </h1>
 
             <p className="text-on-surface-variant text-base leading-relaxed mb-8">
               自撮り1枚で、今夜の北新地から
               <br />
-              オファーが届く{" "}
+              スカウトが届く{" "}
               <Icon
                 name="photo_camera"
                 className="text-[18px] align-middle"
@@ -58,7 +58,7 @@ export default function Page() {
                 href="/dashboard"
                 className="relative w-full py-5 bg-gradient-to-r from-primary to-primary-dim text-white rounded-full text-lg font-bold shadow-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-transform"
               >
-                オファーを受け取る{" "}
+                スカウトを受け取る{" "}
                 <Icon name="arrow_forward" className="text-xl" />
               </Link>
             </div>
@@ -104,7 +104,7 @@ export default function Page() {
               <div className="bg-surface-container-lowest/80 backdrop-blur-sm p-5 rounded-lg shadow-sm border border-white/50">
                 <div className="flex items-center justify-center gap-1 mb-1">
                   <p className="text-xs text-on-surface-variant">
-                    平均オファー数
+                    平均スカウト数
                   </p>
                   <Icon
                     name="trending_up"
@@ -172,7 +172,7 @@ export default function Page() {
             </div>
             <div>
               <h3 className="font-bold text-base mb-0.5 flex items-center gap-1.5">
-                お店からオファーが届く{" "}
+                お店からスカウトが届く{" "}
                 <Icon name="mail" className="text-sm" />
               </h3>
               <p className="text-xs text-on-surface-variant">
@@ -213,14 +213,14 @@ export default function Page() {
           <div className="bg-surface-container-lowest p-3 rounded-xl shadow-sm border-l-4 border-primary/20">
             <p className="text-[11px] leading-tight">
               <span className="font-bold">北新地ラウンジ</span>
-              が日当35,000円でオファー{" "}
+              が日当35,000円でスカウト{" "}
               <Icon name="send" className="text-[12px] align-middle" />
             </p>
           </div>
           <div className="bg-surface-container-lowest p-3 rounded-xl shadow-sm border-l-4 border-primary/20">
             <p className="text-[11px] leading-tight">
               <span className="font-bold">北新地クラブ</span>
-              が新しいキャストとオファー成立{" "}
+              が新しいキャストとマッチ成立{" "}
               <Icon name="handshake" className="text-[12px] align-middle" />
             </p>
           </div>
@@ -248,7 +248,7 @@ export default function Page() {
               <div>
                 <p className="font-bold text-sm">Aさん (22歳)</p>
                 <p className="text-[10px] text-on-surface-variant">
-                  未経験 / オファーまで1日
+                  未経験 / スカウトまで1日
                 </p>
               </div>
             </div>
@@ -265,7 +265,7 @@ export default function Page() {
               <div>
                 <p className="font-bold text-sm">Mさん (25歳)</p>
                 <p className="text-[10px] text-on-surface-variant">
-                  経験あり / オファーまで3時間
+                  経験あり / スカウトまで3時間
                 </p>
               </div>
             </div>
@@ -388,7 +388,7 @@ export default function Page() {
           href="/dashboard"
           className="block w-full py-5 bg-gradient-to-r from-primary to-primary-dim text-white rounded-full text-lg font-bold shadow-xl active:scale-[0.98] transition-transform mb-4 text-center"
         >
-          オファーを受け取る
+          スカウトを受け取る
         </Link>
         <p className="text-xs text-on-surface-variant">
           登録は完全無料。解約もいつでも可能です。
@@ -418,7 +418,7 @@ export default function Page() {
             href="/dashboard"
             className="w-full py-4 bg-gradient-to-r from-primary to-primary-dim text-white rounded-full text-lg font-bold shadow-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-transform"
           >
-            オファーを受け取る{" "}
+            スカウトを受け取る{" "}
             <Icon name="arrow_forward" className="text-xl" />
           </Link>
         </div>
