@@ -3,7 +3,7 @@ import { Icon } from "@/components/icon";
 
 export default function Page() {
   return (
-    <div className="bg-background text-on-background min-h-screen pb-24 overflow-x-hidden">
+    <div className="bg-background text-on-background min-h-screen overflow-x-hidden">
       {/* Fixed Login Button */}
       <div className="fixed top-4 right-4 z-50">
         <Link
@@ -415,7 +415,7 @@ export default function Page() {
       </footer>
 
       {/* Fixed Bottom CTA */}
-      <div className="fixed bottom-0 left-0 w-full p-4 bg-background/80 backdrop-blur-md z-50 md:bottom-8 md:right-8 md:left-auto md:w-auto md:bg-transparent md:p-0">
+      <div className="fixed bottom-0 left-0 w-full p-4 pb-6 z-50 md:bottom-8 md:right-8 md:left-auto md:w-auto md:p-0">
         <div className="max-w-md mx-auto md:max-w-none">
           <Link
             href="/dashboard"
