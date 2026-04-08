@@ -27,7 +27,7 @@ export function ActivityTicker() {
   const [page, setPage] = useState(0);
   const [phase, setPhase] = useState<Phase>("entering");
   const [itemStates, setItemStates] = useState([false, false, false]);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const showItems = useCallback(() => {
     setPhase("entering");
