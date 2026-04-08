@@ -17,14 +17,14 @@ export default function Page() {
 
       {/* Hero Section with Background */}
       <div
-        className="bg-cover bg-center"
+        className="bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(rgba(254,245,238,0.85), rgba(254,245,238,0.85)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuA0d9mq3nuMbawxBSthuTgpyyHmM2Jg2G7KDWZFrSDPwC15PyeVaMswpnIZdnfm5W-8cfhTjvdngE8cOhPSlQXYCbYCbiQvM4MAZPFLfknbouFtJak68sE_Ip-szKhQ4SwX02yNZl33EVUEKzBfk9fVvvbnbCYcD3bex8QtfEpBhOpAMA42tKtR2YgGczLlAWKqhdbreQzJtc4mEsBqrCPgOo97uVJQFg8jngnlzXanM6Y0iDg2fELugHh04jCV1qLc-wO-6FIBRy8)`,
+          backgroundImage: `linear-gradient(rgba(10,10,12,0.60), rgba(10,10,12,0.85)), url(/kyaba_hero.png)`,
         }}
       >
         <header className="pt-8 px-6 lg:max-w-6xl lg:mx-auto">
           <div className="max-w-md mx-auto flex items-center justify-start lg:max-w-none">
-            <span className="text-2xl font-bold text-[#322e2a] font-headline">
+            <span className="text-2xl font-bold text-white font-headline drop-shadow-md">
               いきなり体入<span className="text-primary">くん</span>
             </span>
           </div>
@@ -34,18 +34,18 @@ export default function Page() {
           <div className="max-w-md mx-auto text-center lg:max-w-none lg:grid lg:grid-cols-2 lg:gap-12 lg:text-left lg:items-center">
             {/* Left Column: Text & CTA */}
             <div>
-              <div className="inline-flex items-center gap-1.5 px-4 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold mb-4">
+              <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full text-xs font-bold mb-4 shadow-sm">
                 北新地エリア限定{" "}
                 <Icon name="location_on" className="text-[14px]" />
               </div>
 
-              <h1 className="text-[2.25rem] font-bold leading-tight mb-4 tracking-tight">
+              <h1 className="text-[2.25rem] font-bold leading-tight mb-4 tracking-tight text-white drop-shadow-lg">
                 わたしにも
                 <br className="lg:hidden" />
                 スカウト来るかな？
               </h1>
 
-              <p className="text-on-surface-variant text-base leading-relaxed mb-8">
+              <p className="text-white/80 text-base leading-relaxed mb-8 drop-shadow-sm">
                 自撮り1枚で、今夜の北新地から
                 <br className="lg:hidden" />
                 スカウトが届く{" "}
@@ -56,10 +56,10 @@ export default function Page() {
               </p>
 
               <div className="relative group max-w-xs mx-auto mb-12 lg:mx-0">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary-container rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary-container rounded-full blur opacity-40 group-hover:opacity-75 transition duration-1000"></div>
                 <Link
                   href="/dashboard"
-                  className="relative w-full py-5 bg-gradient-to-r from-primary to-primary-dim text-white rounded-full text-lg font-bold shadow-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-transform"
+                  className="relative w-full py-5 bg-gradient-to-r from-primary to-primary-dim text-white rounded-full text-lg font-bold shadow-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition-transform"
                 >
                   スカウトを受け取る{" "}
                   <Icon name="arrow_forward" className="text-xl" />
@@ -67,75 +67,75 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Right Column: Bento Grid */}
+            {/* Right Column: Bento Grid Glassmorphism */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-surface-container-lowest/80 backdrop-blur-sm p-5 rounded-lg shadow-sm border border-white/50">
-                <div className="flex items-center justify-center gap-1 mb-1">
-                  <p className="text-xs text-on-surface-variant">
+              <div className="bg-black/30 backdrop-blur-md p-5 rounded-xl shadow-lg border border-white/20 transition-all hover:bg-black/40">
+                <div className="flex items-center justify-center gap-1.5 mb-1.5">
+                  <p className="text-xs text-white/80 font-medium">
                     本日の利用者
                   </p>
                   <Icon
                     name="groups"
-                    className="text-xs text-on-surface-variant"
+                    className="text-[14px] text-white/80"
                   />
                 </div>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-2xl font-bold text-primary">124</span>
-                  <span className="text-[10px] text-on-surface-variant">
+                  <span className="text-3xl font-black text-primary drop-shadow-md">124</span>
+                  <span className="text-[10px] text-white/70">
                     人
                   </span>
                 </div>
               </div>
 
-              <div className="bg-surface-container-lowest/80 backdrop-blur-sm p-5 rounded-lg shadow-sm border border-white/50">
-                <div className="flex items-center justify-center gap-1 mb-1">
-                  <p className="text-xs text-on-surface-variant">
+              <div className="bg-black/30 backdrop-blur-md p-5 rounded-xl shadow-lg border border-white/20 transition-all hover:bg-black/40">
+                <div className="flex items-center justify-center gap-1.5 mb-1.5">
+                  <p className="text-xs text-white/80 font-medium">
                     最高提示日当
                   </p>
                   <Icon
                     name="diamond"
-                    className="text-xs text-on-surface-variant"
+                    className="text-[14px] text-white/80"
                   />
                 </div>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-2xl font-bold text-primary">40,000</span>
-                  <span className="text-[10px] text-on-surface-variant">
+                  <span className="text-3xl font-black text-primary drop-shadow-md">40,000</span>
+                  <span className="text-[10px] text-white/70">
                     円〜
                   </span>
                 </div>
               </div>
 
-              <div className="bg-surface-container-lowest/80 backdrop-blur-sm p-5 rounded-lg shadow-sm border border-white/50">
-                <div className="flex items-center justify-center gap-1 mb-1">
-                  <p className="text-xs text-on-surface-variant">
+              <div className="bg-black/30 backdrop-blur-md p-5 rounded-xl shadow-lg border border-white/20 transition-all hover:bg-black/40">
+                <div className="flex items-center justify-center gap-1.5 mb-1.5">
+                  <p className="text-xs text-white/80 font-medium">
                     平均スカウト数
                   </p>
                   <Icon
                     name="trending_up"
-                    className="text-xs text-on-surface-variant"
+                    className="text-[14px] text-white/80"
                   />
                 </div>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-2xl font-bold text-primary">4.2</span>
-                  <span className="text-[10px] text-on-surface-variant">
+                  <span className="text-3xl font-black text-primary drop-shadow-md">4.2</span>
+                  <span className="text-[10px] text-white/70">
                     件
                   </span>
                 </div>
               </div>
 
-              <div className="bg-surface-container-lowest/80 backdrop-blur-sm p-5 rounded-lg shadow-sm border border-white/50">
-                <div className="flex items-center justify-center gap-1 mb-1">
-                  <p className="text-xs text-on-surface-variant">
+              <div className="bg-black/30 backdrop-blur-md p-5 rounded-xl shadow-lg border border-white/20 transition-all hover:bg-black/40">
+                <div className="flex items-center justify-center gap-1.5 mb-1.5">
+                  <p className="text-xs text-white/80 font-medium">
                     募集中の店舗
                   </p>
                   <Icon
                     name="apartment"
-                    className="text-xs text-on-surface-variant"
+                    className="text-[14px] text-white/80"
                   />
                 </div>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-2xl font-bold text-primary">85</span>
-                  <span className="text-[10px] text-on-surface-variant">
+                  <span className="text-3xl font-black text-primary drop-shadow-md">85</span>
+                  <span className="text-[10px] text-white/70">
                     店
                   </span>
                 </div>
