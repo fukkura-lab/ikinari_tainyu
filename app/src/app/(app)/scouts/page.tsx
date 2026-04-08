@@ -205,7 +205,7 @@ export default function ScoutsPage() {
                 </div>
                 <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-md border-2 border-white">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNFeepQGAwL-NX42nqnimMIFvcS3yEruxjVIvK8CVXmx4aCKpezqHdXEwALA7O2C1_ZlaiYi3srX59CaiKSE0b-TAlDcbog9ragagog1wo6kqfxTYkA3NmoqIFAGLLeYJUj3IYjbIfaeg3Yj2KtQXqIz8PH4DRctA9e5rq0ir9F_jupl6qC1pzwVXlnRbIi0P2c-LFl495huuf96CAo7nrLiEnnnAHLBkuuSb91w-E_DbnDvexW3SyCWw43xXgHjpLirCoxCEZQ7Y"
+                    src="/club_1.png"
                     alt="CLUB Luminous"
                     width={64}
                     height={64}
@@ -240,7 +240,7 @@ export default function ScoutsPage() {
               tags: ["衣装貸出", "私服OK"],
               time: "4時間前",
               image:
-                "https://lh3.googleusercontent.com/aida-public/AB6AXuC6kus5oDiXnBo726B4tr9bS0uahb5j7mLv1fTeydBi-32_1v66SA7Vzm5ISga9F5BaoP6iVMBPeHdqoBzKbFP9N4cqp-EWSmUJhG-HjcJJAdEr2coe7-taGRF7A47Urs288WofA69pJoTI-2wj3_B2s8bGN6liyGSGSwMiG-cEFlewE2OmzUaztVxKvCGCNUOMmkhlwHay5grxZzae6e2dFudXvAPBvS0VqIYPuvZ2eOnlNxxMIt535wgTKW8NRBFVNU1A6lxkdDc",
+                "/club_2.png",
             },
             {
               shop: "Bar & Lounge EMERALD",
@@ -248,7 +248,7 @@ export default function ScoutsPage() {
               tags: ["ノルマなし", "全額日払い"],
               time: "昨日",
               image:
-                "https://lh3.googleusercontent.com/aida-public/AB6AXuDYkzw55AqQW7a6MaKfl6Y1fTiKrjDbEAq68tBSgtPk7znhwGJwZvb_YKwvAl0bWP7xxChtXZJZ62661j7AakXANy22iqz4M-_xWH6mzcUH_Uj2Z4LbfihlFOlWHr10cGdCT5MKwO-U_z2y_ovMW08inXwzyp09n0NcHIFFxTVxFJcPUtSNwpekkEEXTuuYjAZMeZaTBcLZBrnFlzASofthiCMB6p5zAESo4A9e3Snbp_TIyNJyd7aDv8dlqAG0NKfLEZIxZ83b57c",
+                "/club_3.png",
             },
           ].map((scout) => (
             <Link href="/scouts/1" key={scout.shop} className="block">
