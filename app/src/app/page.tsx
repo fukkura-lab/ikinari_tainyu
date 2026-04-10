@@ -19,12 +19,12 @@ export default function Page() {
       <div
         className="bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(254,245,238,0.1) 0%, rgba(254,245,238,0.6) 50%, rgba(254,245,238,1) 100%), url(/kyaba_hero.png)`,
+          backgroundImage: `linear-gradient(to bottom, rgba(254,245,238,0) 0%, rgba(254,245,238,0.3) 50%, rgba(254,245,238,1) 100%), url(/kyaba_hero.png)`,
         }}
       >
         <header className="pt-8 px-6 lg:max-w-6xl lg:mx-auto relative z-10">
           <div className="max-w-md mx-auto flex items-center justify-start lg:max-w-none">
-            <span className="text-2xl font-bold text-[#322e2a] font-headline">
+            <span className="text-2xl font-bold text-white font-headline drop-shadow-lg">
               いきなり体入<span className="text-primary">くん</span>
             </span>
           </div>
@@ -33,19 +33,20 @@ export default function Page() {
         <header className="pt-12 pb-12 px-6 relative z-10 lg:pt-24 lg:pb-24 lg:max-w-6xl lg:mx-auto">
           <div className="max-w-md mx-auto text-center lg:max-w-none lg:grid lg:grid-cols-2 lg:gap-12 lg:text-left lg:items-center">
             {/* Left Column: Text & CTA */}
-            <div>
-              <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs font-bold mb-4 shadow-sm">
+            <div className="relative">
+              <div className="absolute -inset-8 bg-[radial-gradient(ellipse_at_30%_50%,rgba(0,0,0,0.55)_0%,transparent_70%)] pointer-events-none"></div>
+              <div className="relative inline-flex items-center gap-1.5 px-4 py-1.5 bg-primary text-white rounded-full text-xs font-bold mb-4 shadow-sm">
                 北新地エリア限定{" "}
                 <Icon name="location_on" className="text-[14px]" />
               </div>
 
-              <h1 className="text-[2.25rem] font-bold leading-tight mb-4 tracking-tight text-[#322e2a]">
+              <h1 className="relative text-[2.25rem] font-bold leading-tight mb-4 tracking-tight text-white drop-shadow-md">
                 わたしにも
                 <br className="lg:hidden" />
                 スカウト来るかな？
               </h1>
 
-              <p className="text-on-surface-variant text-base leading-relaxed mb-8 font-medium">
+              <p className="relative text-white/80 text-base leading-relaxed mb-8 font-medium">
                 自撮り1枚で、今夜の北新地から
                 <br className="lg:hidden" />
                 スカウトが届く{" "}
@@ -55,7 +56,7 @@ export default function Page() {
                 />
               </p>
 
-              <div className="relative group max-w-xs mx-auto mb-12 lg:mx-0">
+              <div className="relative group max-w-xs mx-auto lg:mx-0">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary-container rounded-full blur opacity-40 group-hover:opacity-75 transition duration-1000"></div>
                 <Link
                   href="/dashboard"
@@ -68,7 +69,7 @@ export default function Page() {
             </div>
 
             {/* Right Column: Bento Grid Light Glassmorphism */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="mt-8 lg:mt-0 grid grid-cols-2 gap-4">
               <div className="bg-surface-container-lowest/80 backdrop-blur-md p-5 rounded-xl shadow-sm border border-white/60">
                 <div className="flex items-center justify-center gap-1.5 mb-1.5">
                   <p className="text-xs text-on-surface-variant font-medium">
