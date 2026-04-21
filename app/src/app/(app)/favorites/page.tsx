@@ -57,7 +57,7 @@ export default function FavoritesPage() {
         </div>
       </header>
 
-      <div className="pt-20 pb-32 px-4 max-w-2xl mx-auto">
+      <div className="pt-20 pb-32 px-6 max-w-md mx-auto">
         {/* List header */}
         <div className="flex items-center justify-between mb-6 px-2">
           <p className="text-sm text-on-surface-variant font-medium">

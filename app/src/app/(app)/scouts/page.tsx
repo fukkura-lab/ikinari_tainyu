@@ -47,15 +47,15 @@ export default function ScoutsPage() {
           <p className="text-on-surface-variant text-[10px] font-bold mb-1 uppercase tracking-widest">
             Newest Offers
           </p>
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-black whitespace-nowrap">
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="text-xl font-black leading-tight">
               届いたスカウト{" "}
               <span className="text-primary text-2xl font-black">12</span>
               <span className="text-xs font-bold text-on-surface-variant ml-0.5">
                 件
               </span>
             </h2>
-            <div className="relative shrink-0 ml-3">
+            <div className="relative shrink-0">
               <button
                 onClick={() => toggle("sort")}
                 className="flex items-center gap-1 text-on-surface-variant px-3 py-1.5 bg-white rounded-xl shadow-sm border border-outline-variant/10 active:scale-95 transition-transform"

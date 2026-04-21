@@ -298,11 +298,13 @@ export default function ScoutDetailPage() {
       </section>
 
       {/* Fixed Bottom Action Bar — above BottomNav */}
-      <div className="fixed bottom-24 left-0 right-0 z-40 bg-transparent mx-4 px-5 py-4">
-        <button className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-gradient-to-r from-primary to-primary-dim text-on-primary font-semibold text-sm shadow-lg active:scale-[0.98] transition-transform">
-          <Icon name="check_circle" filled size="20px" />
-          <span>¥40,000 このお店に決める</span>
-        </button>
+      <div className="fixed bottom-24 inset-x-0 z-40 px-4 py-4 pointer-events-none">
+        <div className="max-w-md mx-auto pointer-events-auto">
+          <button className="w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-gradient-to-r from-primary to-primary-dim text-on-primary font-semibold text-sm shadow-lg active:scale-[0.98] transition-transform">
+            <Icon name="check_circle" filled size="20px" />
+            <span>¥40,000 このお店に決める</span>
+          </button>
+        </div>
       </div>
     </div>
   );

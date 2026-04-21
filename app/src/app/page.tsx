@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@/components/icon";
 import { ActivityTicker } from "@/components/activity-ticker";
@@ -22,7 +23,7 @@ export default function Page() {
           backgroundImage: `linear-gradient(to bottom, rgba(254,245,238,0) 0%, rgba(254,245,238,0.3) 50%, rgba(254,245,238,1) 100%), url(/kyaba_hero.png)`,
         }}
       >
-        <header className="pt-8 px-6 lg:max-w-6xl lg:mx-auto relative z-10">
+        <header className="pt-8 px-6 md:max-w-3xl md:mx-auto lg:max-w-6xl relative z-10">
           <div className="max-w-md mx-auto flex items-center justify-start lg:max-w-none">
             <span className="text-2xl font-bold text-white font-headline drop-shadow-lg">
               いきなり体入<span className="text-primary">くん</span>
@@ -30,7 +31,7 @@ export default function Page() {
           </div>
         </header>
 
-        <header className="pt-12 pb-12 px-6 relative z-10 lg:pt-24 lg:pb-24 lg:max-w-6xl lg:mx-auto">
+        <header className="pt-12 pb-12 px-6 relative z-10 md:max-w-3xl md:mx-auto lg:pt-24 lg:pb-24 lg:max-w-6xl">
           <div className="max-w-md mx-auto text-center lg:max-w-none lg:grid lg:grid-cols-2 lg:gap-12 lg:text-left lg:items-center">
             {/* Left Column: Text & CTA */}
             <div className="relative">
@@ -154,8 +155,14 @@ export default function Page() {
         </h2>
         <div className="space-y-6 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
           <div className="bg-surface-container-low p-5 rounded-full flex items-center gap-6 shadow-sm border border-white/40">
-            <div className="w-16 h-16 shrink-0 rounded-full bg-white flex items-center justify-center shadow-inner">
-              <Icon name="add_a_photo" className="text-primary text-3xl" />
+            <div className="w-16 h-16 shrink-0 rounded-full overflow-hidden shadow-inner">
+              <Image
+                src="/step_1.png"
+                alt="自撮りをアップロード"
+                width={64}
+                height={64}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h3 className="font-bold text-base mb-0.5 flex items-center gap-1.5">
@@ -169,10 +176,13 @@ export default function Page() {
           </div>
 
           <div className="bg-surface-container-low p-5 rounded-full flex items-center gap-6 shadow-sm border border-white/40">
-            <div className="w-16 h-16 shrink-0 rounded-full bg-white flex items-center justify-center shadow-inner">
-              <Icon
-                name="notifications_active"
-                className="text-primary text-3xl"
+            <div className="w-16 h-16 shrink-0 rounded-full overflow-hidden shadow-inner">
+              <Image
+                src="/step_2.png"
+                alt="お店からスカウトが届く"
+                width={64}
+                height={64}
+                className="w-full h-full object-cover"
               />
             </div>
             <div>
@@ -187,8 +197,14 @@ export default function Page() {
           </div>
 
           <div className="bg-surface-container-low p-5 rounded-full flex items-center gap-6 shadow-sm border border-white/40">
-            <div className="w-16 h-16 shrink-0 rounded-full bg-white flex items-center justify-center shadow-inner">
-              <Icon name="local_bar" className="text-primary text-3xl" />
+            <div className="w-16 h-16 shrink-0 rounded-full overflow-hidden shadow-inner">
+              <Image
+                src="/step_3.png"
+                alt="今夜そのまま体入へ"
+                width={64}
+                height={64}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h3 className="font-bold text-base mb-0.5 flex items-center gap-1.5">
@@ -223,10 +239,16 @@ export default function Page() {
           利用者のこえ <Icon name="chat" className="text-primary" />
         </h2>
         <div className="flex gap-4 overflow-x-auto no-scrollbar pb-4 snap-x md:grid md:grid-cols-2 md:overflow-visible">
-          <div className="min-w-[280px] snap-center bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-surface-container">
+          <div className="w-[85%] shrink-0 snap-center bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-surface-container md:w-auto">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <Icon name="person" className="text-primary/40 text-2xl" />
+              <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
+                <Image
+                  src="/testimonial_1.png"
+                  alt="Aさん"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <p className="font-bold text-sm">Aさん (22歳)</p>
@@ -240,10 +262,16 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="min-w-[280px] snap-center bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-surface-container">
+          <div className="w-[85%] shrink-0 snap-center bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-surface-container md:w-auto">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <Icon name="person" className="text-primary/40 text-2xl" />
+              <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
+                <Image
+                  src="/testimonial_2.png"
+                  alt="Mさん"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <p className="font-bold text-sm">Mさん (25歳)</p>
@@ -380,18 +408,20 @@ export default function Page() {
 
       {/* Footer */}
       <footer className="bg-surface-container-highest/30 pt-12 pb-24 px-6 text-center">
-        <div className="mb-8">
-          <p className="text-lg font-bold mb-4">いきなり体入くん</p>
-          <div className="flex flex-col gap-3 text-xs text-on-surface-variant">
-            <a href="#">店舗様向けページ</a>
-            <a href="#">運営会社について</a>
-            <a href="#">利用規約</a>
-            <a href="#">プライバシーポリシー</a>
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-8">
+            <p className="text-lg font-bold mb-4">いきなり体入くん</p>
+            <div className="flex flex-col gap-3 text-xs text-on-surface-variant">
+              <a href="#">店舗様向けページ</a>
+              <a href="#">運営会社について</a>
+              <a href="#">利用規約</a>
+              <a href="#">プライバシーポリシー</a>
+            </div>
           </div>
+          <p className="text-[10px] text-outline">
+            &copy; 2024 Ikinari Tainyu-kun. All rights reserved.
+          </p>
         </div>
-        <p className="text-[10px] text-outline">
-          &copy; 2024 Ikinari Tainyu-kun. All rights reserved.
-        </p>
       </footer>
 
       {/* Fixed Bottom CTA */}
